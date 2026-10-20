@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1st post crud using async await and generic function</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row mt-3 mb-3">
+            <div class="col-md-6 offset-md-3 mt-3">
+                <form id="postForm">
+                    <div class="card">
+                        <div class="card-header bg-info text-white text-center">
+                            <h2>Post Details</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="postTitle">Post Title</label>
+                                <input required type="text" id="postTitle" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="postDescription">Post Description</label>
+                                <textarea required id="postDescription" class="form-control" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-info btn-block" id="createPostBtn">Create Post</button>
+                            <button type="button" class="btn btn-dark btn-block d-none"
+                                id="updatePostBtn">Update
+                                Post</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row mb-5 " id="postContainer">
+            <!-- <div class="col-md-3 mb-3 mt-3">
+                <div class="card">
+                    <div class="card-header bg-info text-white text-capitalize p-2">
+                        <h2>Best Friend</h2>
+                    </div>
+                    <div class="card-body  pt-1">
+                        <h4 class="text-capitalize desHeading ">Best friend : </h4>
+                        <p class="card-text description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
+                            nulla sed quo molestiae facilis odit ullam ratione nam numquam aspernatur. Odit, neque
+                            magni? Nulla repudiandae voluptas officia necessitatibus dolores itaque!</p>
+                    </div>
+                    <div class="card-footer bg-info text-white d-flex justify-content-between">
+                        <button onlick="onEdit(this)" class="btn btn-sm btn-dark">Edit</button>
+                        <button onlick="onDelete(this)" class="btn btn-sm btn-danger">Delete</button>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+
+    <div id="spinner" class="d-none">
+        <button class="btn btn-primary" type="button" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Loading...
+        </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>
